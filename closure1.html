@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul class="nav">
+      <li>cc</li>
+      <li>wq</li>
+      <li>ewq</li>
+      <li>ewqeqw</li>
+    </ul>
+    <script>
+      var nav = document.querySelector('.nav')
+      var li = nav.querySelectorAll('li')
+      // for(var i=0;i<li.length;i++) {
+      //     li[i].onclick = (function(j) {
+      //         return function() {
+      //             alert(j)
+      //         }
+      //     })(i)
+      // }
+    //   for(var i=0;i<li.length;i++) {
+    //       li[i].index = i
+    //       li[i].onclick = function() {
+    //           alert(this.index)
+    //       }
+    //   }
+    //   for(var i=0;i<li.length;i++) {
+    //       (function(i) {
+    //         setTimeout(function(){
+    //             console.log(i)
+    //         },1000)
+    //       })(i)
+    //   }
+      function fn (distance) {
+          var fee = 0;
+          if (distance<13) {
+            return fee = 13
+          }else {
+            return fee = 13 + (distance - 13) * 5
+          }
+      }
+      console.log(fn(15))
+    </script>
+  </body>
+</html>

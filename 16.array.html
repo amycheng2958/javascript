@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <div class="search">
+            按照价格查询: <input type="text" class="start"> - <input type="text" class="end">
+            <button class="search-price">搜索</button>按照商品名称查询<input type="text" class="product">
+            <button class="search-pro">查询</button>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <td>id</td>
+                <td>产品名称</td>
+                <td>价格</td>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <script>
+        let obj = [
+            {
+                id: 1,
+                pname: "小米",
+                price: 2999
+            },
+            {
+                id: 2,
+                pname: "oppo",
+                price: 999
+            },
+            {
+                id: 3,
+                pname: "荣耀",
+                price: 1999
+            },
+            {
+                id: 4,
+                pname: "华为",
+                price: 3999
+            },
+        ];
+        setData(obj)
+        function setData(mydata) {
+            let pnode = document.querySelector('tbody');
+            pnode.innerHTML = ''
+            mydata.forEach(element => {
+                let tr = document.createElement('tr')
+                tr.innerHTML = `<td>${element.id}</td><td>${element.pname}</td><td>${element.price}</td>`
+                pnode.appendChild(tr)
+            }); 
+        }
+        var fn = new Function('console.log(1)')
+        console.dir(fn)
+        document.querySelector('.search-price').onclick = function() {
+            let start = document.querySelector('.start').value;
+            let end = document.querySelector('.end').value;
+            console.log(start)
+            let phone = obj.filter(element => {
+                return start < element.price && element.price < end
+            })
+            setData(phone)
+        }
+        document.querySelector('.search-pro').onclick = function() {
+            let product = document.querySelector('.product').value;
+            let phone = [];
+            obj.some(element => {
+                if (element.pname === product) {
+                    phone.push(element)
+                    return true;
+                }
+            })
+            setData(phone)
+        }
+    </script>
+</body>
+</html>

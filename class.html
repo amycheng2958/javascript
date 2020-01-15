@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button>点击</button>
+    <script>
+      let that = null;
+      class Star {
+        constructor(name, age) {
+            that = this;
+          this.name = name;
+          this.age = age;
+          this.btn = document.querySelector("button");
+          this.btn.onclick = this.sing.bind(that);
+        }
+        sing() {
+          console.log(this);
+          console.log(this.name);
+        }
+        dance() {
+        //   console.log(this);
+        }
+      }
+      let ldh = new Star("cyy");
+    //   ldh.sing();
+    </script>
+  </body>
+</html>
