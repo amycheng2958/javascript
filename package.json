@@ -1,27 +1,17 @@
 {
-  "name": "javascript",
-  "version": "1.0.0",
-  "description": "",
+  "name": "asynchronous",
+  "version": "0.1.0",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/amycheng2958/javascript.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/amycheng2958/javascript/issues"
-  },
-  "homepage": "https://github.com/amycheng2958/javascript#readme",
-  "dependencies": {
-    "lodash": "^4.17.21"
-  },
+  "author": "zce <w@zce.me> (https://zce.me)",
+  "license": "MIT",
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-preset-es2017": "^6.24.1"
+    "@webpack-cli/serve": "^1.5.1",
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
+  },
+  "dependencies": {
+    "xmlhttprequest": "^1.8.0"
   }
 }
