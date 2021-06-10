@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="height:300px;width:800px;border: 1px solid red"></div>
+    <script>
+        function print_json(){
+            var jso;
+            var o = document.getElementsByTagName("div")[0]
+            if (window.performance.toJSON === undefined) {
+                json = "window.performance.toJSON() is NOT supported";
+                o.innerHTML += json + "<br>";
+            } else {
+                var s;
+                json = window.performance.toJSON();
+                s = JSON.stringify(json);
+                o.innerHTML = "<p>performance = " + s + "</p>";
+                var perf = JSON.parse(s);
+                var timing = perf.timing;
+                // o.innerHTML += "<p>peformance.timing = " + JSON.stringify(timing) + "</p>";
+                // var navigation = perf.navigation;
+                // o.innerHTML += "<p>peformance.navigation = " + JSON.stringify(navigation) + "</p>";
+            }
+        }
+        print_json()
+    </script>
+
+</body>
+</html>

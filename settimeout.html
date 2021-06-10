@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log('global begain')
+        debugger
+        setTimeout(function a() {
+            console.log('timer1 invoke')
+        }, 1800);
+        setTimeout(function b(){
+            console.log('timer2 invoke')
+            setTimeout(function c() {
+                console.log('inner invoke')
+            },1000)
+        }, 1800);
+        console.log('global end')
+        
+    </script>
+</body>
+</html>

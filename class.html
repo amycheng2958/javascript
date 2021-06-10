@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      var a;
+(function () {
+  function A () {
+    this.a = 1
+    this.b = 2
+  }
+  A.prototype.logA = function () {
+    console.log(this.a)
+  }
+  a = new A()
+})()
+
+a.logA()
+console.log(a)
+
+    </script>
+</body>
+</html>
