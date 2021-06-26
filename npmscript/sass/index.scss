@@ -1,0 +1,11 @@
+$body-bg: #000;
+$body-color: red;
+
+body {
+  margin: 0 auto;
+  padding: 60px;
+  font-size: 100px;
+  max-width: 800px;
+  background-color: $body-bg;
+  color: $body-color;
+}
